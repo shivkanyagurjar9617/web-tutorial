@@ -24,10 +24,10 @@
                 height: 130px;
             }
             .s_main{
-                height: 900px;
+               min-height: 900px;
             }
             footer{
-                height: 320px;
+              min-height: 320px;
             }
             .s_header_nav > li > a{
                 padding: 61px 32px 20px 32px;
@@ -57,6 +57,23 @@
                 color:#3e3d5f !important;
                 
             }
+            .s_panel{
+                height: 220px;
+                background: #424d83;
+            }
+            .s_panel:hover{
+                height: 445px;
+                background: #798ce7;
+                cursor: pointer;
+            }
+            .s_panel:hover > div{
+                display: block !important;
+            }
+            .s_panel_cl{
+                transition: all .2s linear;
+                height: 252px;
+                background: #5264bb;
+            }
         </style>
     </head>
     <body>
@@ -79,16 +96,38 @@
                       <a class="nav-link text-white" href="#">Tools &amp; Resources</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link position-relative s_userlink" href="#"><span class="d-inline-block s_circle position-absolute top-50 start-0" style="left:-10px !important"></span> Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
+                      <a class="nav-link position-relative s_userlink pe-0" href="#"><span class="d-inline-block s_circle position-absolute top-50 start-0" style="left:-10px !important"></span> Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
                     </li>
-                  </ul>
+                </ul>
             </header>
-            <div class="s_main s_tbdr">
+            <div class="s_main text-white">
+                <h1> Welcome Nidhi Bokadiya</h1>
+                <p> How can i help you?</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            <div class="row m-0">
+                <div class="col-12 col-sm-3 mb-3">
+                    <div class="rounded rounded-3 s_panel s_panel1 p-3">
+                        <img src="img/launch.png">
+                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <div class="s_panel1_c1 d-none">A</div>
+                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3 mb-3">
+                    <div class="rounded rounded-3 s_panel s_panel2">A</div>
+                </div>
+                <div class="col-12 col-sm-3 mb-3">
+                    <div class="rounded rounded-3 s_panel s_panel3">A</div>
+                </div>
+                <div class="col-12 col-sm-3 mb-3">
+                    <div class=" rounded rounded-3 s_panel s_panel4">A</div>
+                </div>
             </div>
-            <footer class="s_tbdr bg-white">
-                <div class="row m-0">
-                    <div class="col-5 s_tbdr myCollor">
-                        <h4>FEATURES</h4>
+        </div>
+        <footer class="bg-white myCollor">
+                <div class="row m-0 mb-5" >
+                    <div class="col-5 ">
+                        <h4 class="fw-bold">FEATURES</h4>
                         <ul class="nav">
                             <li class="nav-item">
                               <a class="nav-link" href="#">Beginers Guide</a>
@@ -96,10 +135,10 @@
                             <li class="nav-item">
                               <a class="nav-link" href="#">Tools and Resources</a>
                             </li>
-                          </ul>
+                        </ul>
                     </div>
-                    <div class="col-7 s _tbdr">
-                        <h4>SUPPORT</h4>
+                    <div class="col-7">
+                        <h4 class="fw-bold">SUPPORT</h4>
                         <ul class="nav">
                             <li class="nav-item">
                               <a class="nav-link" href="#">Help Center</a>
@@ -109,17 +148,38 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contect Us</a>
-                              </li>
-                          </ul>
-                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>  
                     <div class="row m-0">
-                        <div class="col-5 s_tbdr ">
-                            <img src="./img/logo.png" float-end height="30px">   
+                        <div class="col-5">
+                        <img src="./img/logo.png">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
+                    </div>
+                        <div class="col-7">
+                            <ul class="nav float-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src="./img/twit.png" >   
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pe-0" href="#"><img src="./img/youtube.png"></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                            <ul class="nav float-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">TermsOf service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link pe-0" href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-7 s_tbdr">
-                            <img src="./img/twit.png" height="30px">  
-                        </div>
-                </div>
+                          
+                    </div>
                 </footer>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>   
