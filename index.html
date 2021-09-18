@@ -15,10 +15,11 @@
                 border: 1px dashed #000;
             }
             body{
-                background: #442460;
-                background-image: url('img/rabbit.png');
-                background-repeat: no-repeat;
-                background-position: 100px 772px;
+                
+                background-image: url('img/rabbit.png'),url('img/footer.svg'),url('img/purple.svg'),url(img/launch.png);
+                background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+                background-size: auto, 1600px 800px,1600px 800px;
+                background-position: 100px 660px, -40px 660px, -32px -32px, -40px 200px;
             }
             header{
                 height: 130px;
@@ -27,7 +28,7 @@
                min-height: 900px;
             }
             footer{
-              min-height: 320px;
+              
             }
             .s_header_nav > li > a{
                 padding: 61px 32px 20px 32px;
@@ -74,31 +75,49 @@
                 height: 252px;
                 background: #5264bb;
             }
+            @media screen and (max-width: 992px){
+                .s_header_nav{
+                    background: #573a70 !important;
+                }
+                .s_header_nav a{
+                    padding-left: 30px !important;
+                    border-bottom:1px solid #744c97 ;
+                    border-radius: 0px !important;
+                }
         </style>
     </head>
     <body>
         <div class="container p-0 s_cont">
             <header class="">
-                <a href="#" class="float-start mt-5">
-                    <img src="./img/logo.png" height="30px">
-                </a>
-                <ul class="nav float-end s_header_nav" >
-                    <li class="nav-item">
-                      <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white " href="#">Service</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#">Our Plans</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#">Tools &amp; Resources</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link position-relative s_userlink pe-0" href="#"><span class="d-inline-block s_circle position-absolute top-50 start-0" style="left:-10px !important"></span> Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
-                    </li>
-                </ul>
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="./img/logo2.png" height="30">
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse d-flex justify-content-end row m-0" id="navbarNav">
+                        <ul class="navbar-nav s_header_nav float-end col-12 col-sm-12 col-md-12 col-lg-5 pe-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Service</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Our Plans</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Our Plans</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link position-relative s_userlink pe-0" href="#"><span class="d-inline-block s_circle position-absolute top-50 start-0" style="left:-30px !important"></span> Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>
             </header>
             <div class="s_main text-white">
                 <h1> Welcome Nidhi Bokadiya</h1>
@@ -114,17 +133,33 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3 s_panel s_panel2">A</div>
+                    <div class="rounded rounded-3 s_panel s_panel2">
+                    <img src="img/group.png">
+                    <h3 class="mb-4">Marketplace Vistas and Decision Hub (MVDH) </h3>
+                        <div class="s_panel1_c1 d-none">A</div>
+                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
+                </div>
                 </div>
                 <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3 s_panel s_panel3">A</div>
+                    <div class="rounded rounded-3 s_panel s_panel3">
+                        <img src="img/launch.png">
+                        <h3 class="mb-4">SustainX Decision Hub </h3>
+                        <div class="s_panel1_c1 d-none">A</div>
+                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a> 
+                        </div>
                 </div>
                 <div class="col-12 col-sm-3 mb-3">
-                    <div class=" rounded rounded-3 s_panel s_panel4">A</div>
+                    <div class=" rounded rounded-3 s_panel s_panel4">
+                        <img src="img/group.png">
+                        <h3 class="mb-4">Agile Researchops And Knowledge Hub(ARKH) </h3>
+                        <div class="s_panel1_c1 d-none">A</div>
+                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>   
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>
-        <footer class="bg-white myCollor">
+        <footer class=" myCollor">
                 <div class="row m-0 mb-5" >
                     <div class="col-5 ">
                         <h4 class="fw-bold">FEATURES</h4>
@@ -150,13 +185,13 @@
                                 <a class="nav-link" href="#">Contect Us</a>
                             </li>
                         </ul>
-                        </div>
-                    </div>  
+                    </div>
+                </div>  
                     <div class="row m-0">
                         <div class="col-5">
                         <img src="./img/logo.png">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>   
-                    </div>
+                        </div>
                         <div class="col-7">
                             <ul class="nav float-end">
                                 <li class="nav-item">
