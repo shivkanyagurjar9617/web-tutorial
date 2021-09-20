@@ -15,13 +15,23 @@
                 border: 1px dashed #000;
             }
             body{
+                background-color:#F3F3F3;
                 background-image: url('img/rabbit.png'),url('img/footer.png'),url('img/purple.png'),url(img/orange.png);
                 background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
                 background-size: auto, 1600px 800px,1600px 800px, 1600px 800px;
                 background-position: 100px 640px, -80px 800px, -32px -32px, -40px 200px;
             }
             header{
-                height: 130px;
+              min-height: 130px;
+            }
+            .fa-bars{
+                color:#fff !important;
+            }
+            header .nav-toggler{
+                border:1px solid #fff !important;
+            }
+            .nav-toggler:focus{
+                box-shadow: none !important;
             }
             .s_main{
                min-height: 900px;
@@ -45,6 +55,9 @@
                 background: #744c97;
             }
             .s_userlink{
+                color:#fff !important;
+            }
+            .s_header_nav > li:last-child > a{
                 color:#e8c8ed;
             }
             .myCollor h4{
@@ -55,7 +68,7 @@
                 
             }
             .s_panel{
-                height: 220px;
+               min-height: 220px;
                 background: #424d83;
             }
             .s_panel:hover{
@@ -67,34 +80,40 @@
                 display: block !important;
             }
             .s_panel_cl{
+                /* transition: property duration timing-function delay|initial|inherit; */
                 transition: all .2s linear;
-                height: 252px;
+               min-height: 252px;
                 background: #5264bb;
+                text-align: center;
+            }
+            .dropdown-toggle::after {
+                display:none;
             }
             @media screen and (max-width: 992px){
                 .s_header_nav{
                     background: #573a70 !important;
                 }
                 .s_header_nav a{
-                    padding-left: 30px !important;
                     border-bottom:1px solid #744c97 ;
                     border-radius: 0px !important;
                 }
+            }
         </style>
     </head>
     <body>
         <div class="container p-0 s_cont">
             <header class="">
-                <nav class="navbar navbar-expand-lg navbar-light ">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">
-                        <img src="img/logo.png" height="30">
+                        <img src="./img/logo.png" height="30">
                       </a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar Nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                       </button>
-                      <div class="collapse navbar-collapse d-flex justify-content-end row m-0" id="navbarNav">
-                        <ul class="navbar-nav s_header_nav float-end col-12 col-sm-12 col-md-12 col-lg-5 pe-0">
+                      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <div class="mx-auto "></div>
+                        <ul class="navbar-nav mb-2 mb-lg-0 s_header_nav">
                           <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                           </li>
@@ -105,53 +124,72 @@
                             <a class="nav-link text-white" href="#">Our Plans</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Tools&amp; service</a>
+                            <a class="nav-link text-white" href="#">Tools &amp; Resources</a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link position-relative s_userlink pe-0" href="#"><span class="d-inline-block s_circle position-absolute top-50 start-0" style="left:-30px !important"></span> Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
-                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle s_userlink" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                              <span class="d-inline-block s_circle "></span>
+                              <span class="position-relative" style="top:-13px;">Nidhi Bokadiya <i class="fas fa-chevron-down"></i></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                      </div>
-                    </div>
-                </nav>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
             </header>
-            <div class="s_main text-white">
+        <div class="s_main text-white p-3" >
                 <h1> Welcome Nidhi Bokadiya!</h1>
                 <p> How can i help you?</p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
             <div class="row m-0">
-                <div class="col-12 col-sm-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 s_panel s_panel1 p-3">
                         <img src="img/launch.png">
+                        <img src="img/e7.png" height="40px;">
+                        <img src="img/e7.png" height="40px;">
+                        <img src="img/e7.png" height="40px;">
                         <h3 class="mb-4">Innovation Decision Hub</h3>
-                        <div class="s_panel1_c1 d-none">A</div>
-                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
+                        <div class="s_panel1_c1 d-none">
+                            <img class="img-fluid" src="img/el2.png">
+                            </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3 s_panel s_panel2 p-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="rounded rounded-3 s_panel s_panel2 p-2">
                     <img src="img/group.png">
                     <h3 class="mb-4">Marketplace Vistas and Decision Hub (MVDH) </h3>
-                        <div class="s_panel1_c1 d-none">A</div>
-                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
+                        <div class="s_panel1_c1 d-none">
+                            <img class="img-fluid" src="img/e6.png">
+                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-0">Learn More <i class="fas fa-chevron-right ms-1"></i></a>
+                    </div>
                 </div>
-                </div>
-                <div class="col-12 col-sm-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 s_panel s_panel3 p-3">
                         <img src="img/launch.png">
                         <h3 class="mb-4">SustainX Decision Hub </h3>
-                        <div class="s_panel1_c1 d-none">A</div>
-                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a> 
+                        <div class="s_panel1_c1 d-none">
+                            <img class="img-fluid" src="img/e1.png">
                         </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More <i class="fas fa-chevron-right ms-1"></i></a> 
+                    </div>
                 </div>
-                <div class="col-12 col-sm-3 mb-3">
-                    <div class=" rounded rounded-3 s_panel s_panel4 p-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class=" rounded rounded-3 s_panel s_panel4 p-2">
                         <img src="img/group.png">
                         <h3 class="mb-4">Agile Researchops &amp; Knowledge Hub(ARKH) </h3>
-                        <div class="s_panel1_c1 d-none">A</div>
-                        <a href="#" class="float-end text-white text-decoration-none">Learn More <i class="fas fa-chevron-right ms-1"></i></a>   
+                        <div class="s_panel1_c1 d-none">
+                            <img class="img-fluid" src="img/e4.png">
                         </div>
-                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-0">Learn More <i class="fas fa-chevron-right ms-1"></i></a>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,4 +252,4 @@
             </div>
              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>   
         </body>
-    </html>
+</html>
